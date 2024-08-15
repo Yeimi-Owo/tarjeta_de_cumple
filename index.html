@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tarjeta de Cumpleaños</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="img/cake.ico" type="image/x-icon">
+</head>
+
+<body>
+  
+  <div id="confetti-container">
+    <canvas id="confetti"></canvas>
+  </div>
+  <div class="body">
+    <h1>TARJETA DE CUMPLEAÑOS</h1>
+    <br>
+    <div class="birthdayCard">
+      <div class="cardFront">
+        <h3 class="happy">FELIZ CUMPLEAÑOS CHOII !
+          TOQUE LA TARJETA
+        </h3>
+        <div class="balloons">
+          <div class="balloonOne"></div>
+          <div class="balloonTwo"></div>
+          <div class="balloonThree"></div>
+          <div class="balloonFour"></div>
+          <div class="balloonFive"></div>
+        </div>
+      </div>
+      <div class="cardInside">
+        <h4 class="back">FELIZ CUMPLEAÑOS UU</h4>
+        <p contenteditable="true">Hola, querida amiga Choi </p> 
+        <p contenteditable="true">
+          Mire ya se cumplira un año desde que la conocí y dejame decirle que hoy no solo celebró su cumpleaños, sino también la maravillosa persona que eres y la influencia positiva que has tenido en mi vida en esos momentos dificiles que te contaba y cuando tu compartias tus momentos alegres. Que este año te traiga todo lo que deseas y más, porque te lo mereces. Siga asi Yuri que la quiero y amo mucho por dentro por como eres.</p>
+        <p contenteditable="true" class="name">Yeimi</p>
+      </div>
+    </div>
+    <div class="buttonContainer">
+      <button id="redirectButton">
+        Continue...
+      </button>
+    </div>
+  </div>
+  <script src="scripts/confetti.min.js" charset="utf-8"></script>
+  <script>
+    // Obtén el botón por su ID
+    var redirectButton = document.getElementById("redirectButton");
+
+    // Agrega un event listener para el clic en el botón
+    redirectButton.addEventListener("click", function() {
+      // Redirige a la URL deseada al hacer clic en el botón
+      window.location.href = "https://yeimi-owo.github.io/Miniresumen_Sandia/";
+    });
+
+    // Configuración de confetti
+    const confettiSettings = { target: 'confetti' };
+    const confetti = new window.ConfettiGenerator(confettiSettings);
+    confetti.render();
+  </script>
+</body>
+</html>
+
